@@ -1,0 +1,82 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.cup
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 180px;
+    border: 10px; 
+    border-style: solid;
+    border-color: white;
+    border-top: 4px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /* background-color: aquamarine; */
+    background-image: url(./img/water2.png);
+    background-size: cover;  
+    /* background-size: auto 500px;  */
+    background-repeat: repeat-x;
+    animation: animate 10s linear infinite;
+    box-shadow: 0 0 0 6px sandybrown, 0 20px 35px rgba(0,0,0,1);
+} 
+.cup::before
+{
+ content: '';
+ position: absolute;
+ width: 40px;
+ height: 80px;
+ border: 6px solid sandybrown;
+ right: -62px;
+ top: 30px;
+ border-top-right-radius: 15px;
+ border-bottom-right-radius: 15px;
+}
+.cup h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: steelblue;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-right: 2px solid steelblue;
+    width: 0;
+    overflow: hidden; 
+    animation: loading 2s linear infinite;
+  }
+
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0 150px;
+    } 
+     10%  
+    {
+        background-position: 150px 120px;
+    }
+    40%
+    {
+        background-position: 900px 20px;
+    }  
+    80%
+    {
+        background-position: 1600px 0px;
+    }  
+    100%
+    {
+        background-position: 1800px 150px;
+    }      
+} 
+@keyframes loading {
+    100% {
+      width: 120px;
+    }
+} 
